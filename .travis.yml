@@ -8,7 +8,7 @@ env:
 before_install:
   - openssl aes-256-cbc -K $encrypted_8d8d57adf85c_key -iv $encrypted_8d8d57adf85c_iv -in travis_gcloud.json.enc -out travis_gcloud.json -d
   - curl https://sdk.cloud.google.com | bash > /dev/null;
-  - source $HOME/google-home-sdk/path.bash.inc
+  - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file fibonacci-k8s-265606-09073ab86805.json
   - gcloud config set project  fibonacci-k8s-265606
