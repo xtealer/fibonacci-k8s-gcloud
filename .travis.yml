@@ -17,6 +17,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t xtealer/react-test -f ./client/Dockerfile.dev ./client
 
+# test deployment
 script:
   - docker run -e CI=true xtealer/react-test npm test
 
