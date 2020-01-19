@@ -18,5 +18,5 @@ kubectl apply -f k8s
 
 # set new images for deployments
 kubectl set image deployments/client-deployment client=xtealer/fibonacci-k8s:client-$GIT_SHA
-kubectl set image deployments/server-deployment client=xtealer/fibonacci-k8s:server-$GIT_SHA
-kubectl set image deployments/worker-deployment client=xtealer/fibonacci-k8s:worker-$GIT_SHA
+kubectl set image deployments/server-deployment server=xtealer/fibonacci-k8s:server-$GIT_SHA
+kubectl set image deployments/worker-deployment worker=xtealer/fibonacci-k8s:worker-$GIT_SHA
